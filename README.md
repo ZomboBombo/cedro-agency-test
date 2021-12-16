@@ -1,2 +1,1 @@
-# Online Tools Shop
-Tools Shop — online shop of tools
+# Тестовое для «Cedro Agency»

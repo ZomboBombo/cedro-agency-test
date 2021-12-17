@@ -8,16 +8,16 @@ export default {
     root: './source/',
     html: './source/*.html',
     sass: {
-      root: './source/sass/',
-      main_style_file: './source/sass/styles.scss',
+      root: './source/asset/sass/',
+      main_style_file: './source/asset/sass/styles.scss',
     },
     js: {
-      root: './source/js/',
-      main_files: './source/js/*.js',
-      vendor_files: 'source/js/vendor/*.js',
+      root: './source/asset/js/',
+      main_files: './source/asset/js/*.js',
+      vendor_files: 'source/asset/js/vendor/*.js',
     },
-    fonts: './source/fonts/',
-    images: './source/img/',
+    fonts: './source/asset/fonts/',
+    images: './source/asset/images/',
   },
 
 
@@ -28,8 +28,8 @@ export default {
   */
   build: {
     root: './build/',
-    css: './build/css/',
-    js: './build/js/',
-    images: './build/img/',
+    css: './build/asset/css/',
+    js: './build/asset/js/',
+    images: './build/asset/images/',
   }
 };

@@ -43,15 +43,15 @@ task('server', () => {
         fn: series(html, 'refresh')
       },
       {
-        match: ['source/sass/**/*.{scss,sass}'],
+        match: ['source/asset/sass/**/*.{scss,sass}'],
         fn: series(css)
       },
       {
-        match: ['source/js/**/*.js'],
+        match: ['source/asset/js/**/*.js'],
         fn: series(scripts, 'refresh')
       },
       {
-        match: ['source/img/**/icon-*.svg'],
+        match: ['source/asset/images/**/icon-*.svg'],
         fn: series(sprite, html, 'refresh')
       }
     ],

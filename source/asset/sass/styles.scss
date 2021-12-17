@@ -1,0 +1,24 @@
+/* ***********************
+*** 1. Служебные стили ***
+*********************** */
+@import "normalize.scss";
+@import "fonts.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "global.scss";
+
+
+/* ***************************
+*** 2. Универсальные стили ***
+*************************** */
+@import "utils/container.scss";
+@import "utils/title.scss";
+@import "utils/section.scss";
+
+
+/* **********************
+*** 3. Основные стили ***
+********************** */
+
+// --- 3.1) стили для Главных контентных блоков ---
+@import "blocks/main-blocks/site-header.scss";

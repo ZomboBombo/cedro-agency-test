@@ -1,0 +1,40 @@
+/*
+==============================================================================================================
+---------------------------------------------- Шрифт «TT Norms» ----------------------------------------------
+==============================================================================================================
+*/
+
+// *** жирность «Regular» ***
+@font-face {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+
+  src:
+    local("TTNorms Regular"),
+    local("TTNorms-Regular"),
+    url("../asset/fonts/TTNorms-Regular.woff2") format("woff2"),
+    url("../asset/fonts/TTNorms-Regular.woff") format("woff");
+}
+
+
+/*
+==============================================================================================================
+---------------------------------------- Шрифт «PF Regal Display Pro» ----------------------------------------
+==============================================================================================================
+*/
+
+// *** жирность «Regular» ***
+@font-face {
+  font-family: "PF Regal Display Pro";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+
+  src:
+    local("PFRegalDisplayPro Italic"),
+    local("PFRegalDisplayPro-Italic"),
+    url("../asset/fonts/PFRegalDisplayPro-Italic.woff2") format("woff2"),
+    url("../asset/fonts/PFRegalDisplayPro-Italic.woff") format("woff");
+}

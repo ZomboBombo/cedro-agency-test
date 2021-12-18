@@ -41,7 +41,6 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
     "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
-    "webp": "gulp webp",
     "sprite": "gulp sprite",
     "build": "gulp build",
     "start": "gulp start"

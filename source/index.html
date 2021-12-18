@@ -70,15 +70,393 @@
     </header>
 
     <main class="site-main">
+      <section class="section profile-menu">
+        <div class="container">
+          <span class="visually-hidden">Меню личного кабинета</span>
+
+          <ul class="profile-menu__list">
+            <li class="profile-menu__list-item">
+              <a href="#" class="profile-menu__list-link">Профиль</a>
+            </li>
+
+            <li class="profile-menu__list-item">
+              <a href="#" class="profile-menu__list-link" title="Перейти на страницу с Вашими заказами" aria-label="Перейти на страницу с Вашими заказами">Мои заказы</a>
+            </li>
+          </ul>
+
+          <button type="button" class="profile-menu__exit-button" title="Выйти из Личного кабинета" aria-label="Выйти из Личного кабинета">Выход</button>
+        </div>
+      </section>
+
       <div class="container">
-        <h1 class="title site-main__main-title">Профиль</h1>
+        <h1 class="section-title site-main__main-title">Профиль</h1>
 
-        <section class="section">
-          <h2 class="title">Данные профиля</h2>
-        </section>
+        <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data" class="form">
+          <fieldset class="form__fieldset">
+            <legend class="form__fieldset-title">Данные профиля</legend>
 
-        <section class="section">
-          <h2 class="title">Изменить пароль</h2>
+            <ul class="form__inputs-list form-list">
+              <li class="form-list__item">
+                <label for="user-name">Имя</label>
+                <input type="text" id="user-name" placeholder="Васильев Василий Васильевич" required>
+              </li>
+
+              <li class="form-list__item">
+                <label for="user-email">Почта</label>
+                <input type="email" id="user-email" placeholder="email@example.com" required>
+              </li>
+
+              <li class="form-list__item">
+                <label for="user-phone">Телефон</label>
+                <input type="text" id="user-phone" placeholder="+7 (012) 345-67-89">
+              </li>
+
+              <li class="form-list__item">
+                <label for="user-account-name">Имя аккаунта</label>
+                <input type="text" id="user-account-name" placeholder="Например, Vasya 2V или WVasiliy" required>
+              </li>
+
+              <li class="form-list__item">
+                <label for="user-instagram-link">Профиль в инстаграм</label>
+                <input type="text" id="user-instagram-link" placeholder="Ссылка на Ваш профиль в Instagram">
+              </li>
+              
+              <li class="form-list__item">
+                <label for="user-address">Адрес доставки</label>
+                <input type="text" id="user-address" placeholder="Город, улица, дом" required>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__fieldset-title">Изменить пароль</legend>
+
+            <ul class="form__inputs-list form-list">
+              <li class="form-list__item">
+                <label for="password-old">Старый пароль</label>
+                <input type="password" id="password-old" placeholder="Введите старый пароль" required>
+              </li>
+
+              <li class="form-list__item">
+                <label for="password-new">Новый пароль</label>
+                <input type="password" id="password-new" placeholder="Введите новый пароль" required>
+              </li>
+            </ul>
+          </fieldset>
+
+          <button type="submit" class="form__submit-button">Сохранить изменения</button>
+        </form>
+
+        <section class="section season-trends">
+          <h2 class="section-title season-trends__title">Тренды сезона</h2>
+
+          <div class="season-trends__slider">
+            <ul class="season-trends__slider-list slider-list">
+              <li class="slider-list__item">
+                <article class="product-card">
+                  <h3 class="visually-hidden">Карточка товара</h3>
+
+                  <div class="product-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="asset/images/brown-to-blonde.webp, asset/images/brown-to-blonde@2x.webp 2x">
+
+                      <!--
+                        1x: w-255px, h-255px
+                        2x: w-510px, h-510px
+                      -->
+                      <img src="asset/images/brown-to-blonde.png" srcset="asset/images/brown-to-blonde@2x.png 2x" width="255" height="255" alt="Пигмент для бровей «Brown to Blonde»">
+                    </picture>
+                  </div>
+
+                  <div class="product-card__content">
+                    <strong class="product-card__name">Brown to Blonde</strong>
+                    
+                    <p class="product-card__description">
+                      <span>Пигмент для бровей</span>
+                      <span>12 ml.</span>
+                    </p>
+
+                    <b class="product-card__price">1&nbsp;500&nbsp;&#8381;</b>
+                  </div>
+
+                  <button type="button" class="product-card__add-to-favorite" title="Добавить товар в избранное" aria-label="Добавить товар в избранное">
+                    Добавить в избранное
+
+                    <svg width="24" height="24" class="product-card__add-to-favorite-icon">
+                      <use xlink:href="#icon-product-favorite"></use>
+                    </svg>
+                  </button>
+                </article>
+              </li>
+
+              <li class="slider-list__item">
+                <article class="product-card">
+                  <h3 class="visually-hidden">Карточка товара</h3>
+
+                  <div class="product-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="asset/images/brown-to-blonde.webp, asset/images/brown-to-blonde@2x.webp 2x">
+
+                      <!--
+                        1x: w-255px, h-255px
+                        2x: w-510px, h-510px
+                      -->
+                      <img src="asset/images/brown-to-blonde.png" srcset="asset/images/brown-to-blonde@2x.png 2x" width="255" height="255" alt="Пигмент для бровей «Blonde to Brown»">
+                    </picture>
+                  </div>
+
+                  <div class="product-card__content">
+                    <strong class="product-card__name">Blonde to Brown</strong>
+                    
+                    <p class="product-card__description">
+                      <span>Пигмент для бровей</span>
+                      <span>12 ml.</span>
+                    </p>
+
+                    <b class="product-card__price">1&nbsp;250&nbsp;&#8381;</b>
+                  </div>
+
+                  <button type="button" class="product-card__add-to-favorite" title="Добавить товар в избранное" aria-label="Добавить товар в избранное">
+                    Добавить в избранное
+
+                    <svg width="24" height="24" class="product-card__add-to-favorite-icon">
+                      <use xlink:href="#icon-product-favorite"></use>
+                    </svg>
+                  </button>
+                </article>
+              </li>
+
+              <li class="slider-list__item">
+                <article class="product-card">
+                  <h3 class="visually-hidden">Карточка товара</h3>
+
+                  <div class="product-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="asset/images/brown-to-blonde.webp, asset/images/brown-to-blonde@2x.webp 2x">
+
+                      <!--
+                        1x: w-255px, h-255px
+                        2x: w-510px, h-510px
+                      -->
+                      <img src="asset/images/brown-to-blonde.png" srcset="asset/images/brown-to-blonde@2x.png 2x" width="255" height="255" alt="Пигмент для бровей «Brown to Brown»">
+                    </picture>
+                  </div>
+
+                  <div class="product-card__content">
+                    <strong class="product-card__name">Brown to Brown</strong>
+                    
+                    <p class="product-card__description">
+                      <span>Пигмент для бровей</span>
+                      <span>12 ml.</span>
+                    </p>
+
+                    <b class="product-card__price">1&nbsp;000&nbsp;&#8381;</b>
+                  </div>
+
+                  <button type="button" class="product-card__add-to-favorite" title="Добавить товар в избранное" aria-label="Добавить товар в избранное">
+                    Добавить в избранное
+
+                    <svg width="24" height="24" class="product-card__add-to-favorite-icon">
+                      <use xlink:href="#icon-product-favorite"></use>
+                    </svg>
+                  </button>
+                </article>
+              </li>
+
+              <li class="slider-list__item">
+                <article class="product-card">
+                  <h3 class="visually-hidden">Карточка товара</h3>
+
+                  <div class="product-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="asset/images/brown-to-blonde.webp, asset/images/brown-to-blonde@2x.webp 2x">
+
+                      <!--
+                        1x: w-255px, h-255px
+                        2x: w-510px, h-510px
+                      -->
+                      <img src="asset/images/brown-to-blonde.png" srcset="asset/images/brown-to-blonde@2x.png 2x" width="255" height="255" alt="Пигмент для бровей «Blonde to Blonde»">
+                    </picture>
+                  </div>
+
+                  <div class="product-card__content">
+                    <strong class="product-card__name">Blonde to Blonde</strong>
+                    
+                    <p class="product-card__description">
+                      <span>Пигмент для бровей</span>
+                      <span>12 ml.</span>
+                    </p>
+
+                    <b class="product-card__price">2&nbsp;000&nbsp;&#8381;</b>
+                  </div>
+
+                  <button type="button" class="product-card__add-to-favorite" title="Добавить товар в избранное" aria-label="Добавить товар в избранное">
+                    Добавить в избранное
+
+                    <svg width="24" height="24" class="product-card__add-to-favorite-icon">
+                      <use xlink:href="#icon-product-favorite"></use>
+                    </svg>
+                  </button>
+                </article>
+              </li>
+
+              <li class="slider-list__item">
+                <article class="product-card">
+                  <h3 class="visually-hidden">Карточка товара</h3>
+
+                  <div class="product-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="asset/images/brown-to-blonde.webp, asset/images/brown-to-blonde@2x.webp 2x">
+
+                      <!--
+                        1x: w-255px, h-255px
+                        2x: w-510px, h-510px
+                      -->
+                      <img src="asset/images/brown-to-blonde.png" srcset="asset/images/brown-to-blonde@2x.png 2x" width="255" height="255" alt="Пигмент для бровей «Brown»">
+                    </picture>
+                  </div>
+
+                  <div class="product-card__content">
+                    <strong class="product-card__name">Brown</strong>
+                    
+                    <p class="product-card__description">
+                      <span>Пигмент для бровей</span>
+                      <span>12 ml.</span>
+                    </p>
+
+                    <b class="product-card__price">750&nbsp;&#8381;</b>
+                  </div>
+
+                  <button type="button" class="product-card__add-to-favorite" title="Добавить товар в избранное" aria-label="Добавить товар в избранное">
+                    Добавить в избранное
+
+                    <svg width="24" height="24" class="product-card__add-to-favorite-icon">
+                      <use xlink:href="#icon-product-favorite"></use>
+                    </svg>
+                  </button>
+                </article>
+              </li>
+
+              <li class="slider-list__item">
+                <article class="product-card">
+                  <h3 class="visually-hidden">Карточка товара</h3>
+
+                  <div class="product-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="asset/images/brown-to-blonde.webp, asset/images/brown-to-blonde@2x.webp 2x">
+
+                      <!--
+                        1x: w-255px, h-255px
+                        2x: w-510px, h-510px
+                      -->
+                      <img src="asset/images/brown-to-blonde.png" srcset="asset/images/brown-to-blonde@2x.png 2x" width="255" height="255" alt="Пигмент для бровей «Blonde»">
+                    </picture>
+                  </div>
+
+                  <div class="product-card__content">
+                    <strong class="product-card__name">Blonde</strong>
+                    
+                    <p class="product-card__description">
+                      <span>Пигмент для бровей</span>
+                      <span>12 ml.</span>
+                    </p>
+
+                    <b class="product-card__price">750&nbsp;&#8381;</b>
+                  </div>
+
+                  <button type="button" class="product-card__add-to-favorite" title="Добавить товар в избранное" aria-label="Добавить товар в избранное">
+                    Добавить в избранное
+
+                    <svg width="24" height="24" class="product-card__add-to-favorite-icon">
+                      <use xlink:href="#icon-product-favorite"></use>
+                    </svg>
+                  </button>
+                </article>
+              </li>
+
+              <li class="slider-list__item">
+                <article class="product-card">
+                  <h3 class="visually-hidden">Карточка товара</h3>
+
+                  <div class="product-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="asset/images/brown-to-blonde.webp, asset/images/brown-to-blonde@2x.webp 2x">
+
+                      <!--
+                        1x: w-255px, h-255px
+                        2x: w-510px, h-510px
+                      -->
+                      <img src="asset/images/brown-to-blonde.png" srcset="asset/images/brown-to-blonde@2x.png 2x" width="255" height="255" alt="Пигмент для бровей «Brown Special»">
+                    </picture>
+                  </div>
+
+                  <div class="product-card__content">
+                    <strong class="product-card__name">Brown Special</strong>
+                    
+                    <p class="product-card__description">
+                      <span>Пигмент для бровей</span>
+                      <span>12 ml.</span>
+                    </p>
+
+                    <b class="product-card__price">3&nbsp;500&nbsp;&#8381;</b>
+                  </div>
+
+                  <button type="button" class="product-card__add-to-favorite" title="Добавить товар в избранное" aria-label="Добавить товар в избранное">
+                    Добавить в избранное
+
+                    <svg width="24" height="24" class="product-card__add-to-favorite-icon">
+                      <use xlink:href="#icon-product-favorite"></use>
+                    </svg>
+                  </button>
+                </article>
+              </li>
+
+              <li class="slider-list__item">
+                <article class="product-card">
+                  <h3 class="visually-hidden">Карточка товара</h3>
+
+                  <div class="product-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="asset/images/brown-to-blonde.webp, asset/images/brown-to-blonde@2x.webp 2x">
+
+                      <!--
+                        1x: w-255px, h-255px
+                        2x: w-510px, h-510px
+                      -->
+                      <img src="asset/images/brown-to-blonde.png" srcset="asset/images/brown-to-blonde@2x.png 2x" width="255" height="255" alt="Пигмент для бровей «Blonde Exclusive»">
+                    </picture>
+                  </div>
+
+                  <div class="product-card__content">
+                    <strong class="product-card__name">Blonde Exclusive</strong>
+                    
+                    <p class="product-card__description">
+                      <span>Пигмент для бровей</span>
+                      <span>12 ml.</span>
+                    </p>
+
+                    <b class="product-card__price">7&nbsp;500&nbsp;&#8381;</b>
+                  </div>
+
+                  <button type="button" class="product-card__add-to-favorite" title="Добавить товар в избранное" aria-label="Добавить товар в избранное">
+                    Добавить в избранное
+
+                    <svg width="24" height="24" class="product-card__add-to-favorite-icon">
+                      <use xlink:href="#icon-product-favorite"></use>
+                    </svg>
+                  </button>
+                </article>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#to-catalog" class="season-trends__catalog-link">
+            Перейти в каталог
+            
+            <svg width="16" height="16" class="season-trends__catalog-link-icon">
+              <use xlink:href="#icon-arrow-right"></use>
+            </svg>
+          </a>
         </section>
       </div>
     </main>

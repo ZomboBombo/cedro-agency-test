@@ -1,7 +1,7 @@
 {
-  "name": "liga-a-smart-device",
-  "version": "1.1.0",
-  "description": "Landing page for «Smart Device» company",
+  "name": "cedro-agency",
+  "version": "1.0.0",
+  "description": "Test task for «Cedro Agency»",
   "devDependencies": {
     "@babel/core": "7.16.0",
     "@babel/preset-env": "7.16.0",

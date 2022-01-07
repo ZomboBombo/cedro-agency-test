@@ -1,19 +1,44 @@
 // === МИКСИНЫ ===
 
-// Миксин для удаления маркеров элементов маркированных списков
-// и обнуления отступов
-@mixin markerless {
+/*
+ * -- Миксин для удаления маркеров элементов маркированных списков
+ * -- и обнуления отступов
+ */ 
+@mixin reset-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 
-// Миксин для настроек плавности интерактивных элементов
+/*
+ * -- Миксин для настроек плавности интерактивных элементов
+ */ 
 @mixin transition-settings ($property, $duration: 0.4s, $timing-func: ease) {
   transition: {
     property: $property;
     duration: $duration;
     timing-function: $timing-func;
+  }
+}
+
+
+/*
+ * -- Миксин для скрытия "нежелательного" текста в блоках
+ */
+@mixin hide-block-text {
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+/*
+ * -- Миксин для управления состоянием :hover на тач-устройствах
+ */
+@mixin non-touch {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
   }
 }

@@ -76,6 +76,7 @@ export const sprite = () => {
       cheerio({
         run: ($) => {
           $('[fill]').removeAttr('fill');
+          $('[stroke]').removeAttr('stroke');
           $('[width]').removeAttr('width');
           $('[height]').removeAttr('height');
         },

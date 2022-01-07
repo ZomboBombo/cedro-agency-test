@@ -1,0 +1,22 @@
+.site-footer {
+  padding-top: $section-default-vertical-margin;
+  padding-bottom: $section-default-vertical-margin;
+
+  background-color: $color-dark;
+}
+
+.site-footer__column {
+  margin-top: 40px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.site-footer__fine-print-text {
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-default-white;
+
+  opacity: 0.4;
+}

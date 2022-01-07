@@ -1,19 +1,36 @@
 // === ПЕРЕМЕННЫЕ ===
 
 // *** для различных Ширин вьюпорта ***
-$width--mobile: 375px;
-$width--tablet: 768px;
-$width--desktop: 1023px;
+$width--mobile:                                     375px;
+$width--tablet:                                     768px;
+$width--desktop:                                    1023px;
 
-$width--min: 320px;
-$width--max: 1280px;
+$width--min:                                        320px;
+$width--max:                                        1280px;
 
 
 // *** для Шрифтов ***
-$font-default: "TT Norms", "Arial", sans-serif;
-$font-additional: "PF Regal Display Pro", "Times New Roman", serif;
+$font-default:                                      "TT Norms", "Arial", sans-serif;
+$font-additional:                                   "PF Regal Display Pro", "Times New Roman", serif;
 
 
 // *** для Цветов ***
-$color-default-white: #ffffff;
-$color-default-black: #000000;
+$color-default-white:                             #ffffff;
+$color-default-black:                             #21242e;
+
+$color-dark:                                      #1b1a17;
+
+$color-disabled:                                  #c0c0c0;
+
+$color-gold:                                      #d0bc7a;
+$color-grey:                                      #e4e4e4;
+$color-lightgrey:                                 #f7f7f7;
+$color-brown:                                     #c08d74;
+$color-orange:                                    #ea976f;
+$color-grape:                                     #c07474;
+$color-raspberry:                                 #eb5757;
+
+
+// *** для Отступов ***
+$section-default-vertical-margin:                   64px;
+$section-default-vertical-padding:                  32px;

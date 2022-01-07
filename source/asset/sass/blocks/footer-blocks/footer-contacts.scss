@@ -1,0 +1,79 @@
+.footer-contacts {
+  margin-top: 40px;
+}
+
+.footer-contacts__content {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 16px;
+}
+
+.footer-contacts__item {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  margin-top: 8px;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-default-white;
+
+  opacity: 0.8;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+
+  &--address {
+    align-items: flex-start;
+    max-width: 244px;
+  }
+}
+
+.footer-contacts__icon {
+  margin-right: 8px;
+
+  fill: $color-default-white;
+
+  $properties-for-transition: fill;
+
+  @include transition-settings($properties-for-transition);
+}
+
+.footer-contacts__link {
+  text-decoration: none;
+
+  $properties-for-transition: color, opacity;
+
+  @include transition-settings($properties-for-transition);
+
+
+  // --- Интерактивные стили ---
+  @include non-touch {
+    &:hover {
+      color: $color-gold;
+      opacity: 1;
+    }
+
+    &:hover .footer-contacts__icon {
+      fill: $color-gold;
+    }
+  }
+
+  &:focus {
+    color: $color-gold;
+    opacity: 1;
+  }
+
+  &:focus .footer-contacts__icon {
+    fill: $color-gold;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

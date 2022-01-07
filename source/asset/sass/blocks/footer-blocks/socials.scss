@@ -1,0 +1,42 @@
+.socials {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  row-gap: 8px;
+}
+
+.socials__link {
+  display: block;
+
+  font-size: 0;
+
+
+  // --- Интерактивные стили ---
+  @include non-touch {
+    &:hover .socials__link-icon {
+      border-color: $color-gold;
+    }
+  }
+
+  &:focus .socials__link-icon {
+    border-color: $color-gold;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.socials__link-icon {
+  fill: $color-gold;
+
+  background-color: rgba($color-default-white, 0.1);
+  border: 1px solid rgba($color-default-white, 0.15);;
+  border-radius: 50%;
+
+  $properties-for-transition: border-color, opacity;
+
+  @include transition-settings($properties-for-transition);
+}

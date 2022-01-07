@@ -1,0 +1,71 @@
+.season-trends {
+  padding-bottom: 0;
+  border: none;
+}
+
+.season-trends__title span {
+  color: $color-gold;
+}
+
+.season-trends__slider {
+  margin-top: 32px;
+}
+
+.season-trends__catalog-link {
+  display: flex;
+  align-items: center;
+
+  width: max-content;
+
+  margin-top: 32px;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-default-black;
+  text-decoration: none;
+
+
+  $properties-for-transition: color, opacity;
+
+  @include transition-settings($properties-for-transition);
+
+
+  // --- Интерактивные стили ---
+  @include non-touch {
+    &:hover {
+      color: $color-gold;
+    }
+
+    &:hover .season-trends__catalog-link-icon {
+      stroke: $color-gold;
+      border-color: $color-gold;
+    }
+  }
+
+  &:focus {
+    color: $color-gold;
+  }
+
+  &:focus .season-trends__catalog-link-icon {
+    stroke: $color-gold;
+    border-color: $color-gold;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.season-trends__catalog-link-icon {
+  margin-left: 8px;
+
+  fill: transparent;
+  stroke: $color-default-black;
+
+  border: 1px solid $color-default-black;
+  border-radius: 50%;
+
+  $properties-for-transition: stroke, border-color;
+
+  @include transition-settings($properties-for-transition);
+}

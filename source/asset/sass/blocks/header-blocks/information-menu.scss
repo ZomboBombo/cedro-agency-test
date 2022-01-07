@@ -1,0 +1,95 @@
+.information-menu {
+  display: flex;
+  align-items: center;
+
+  width: auto;
+  max-width: 160px;
+}
+
+.information-menu__list {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.information-menu__list-item {
+  margin-left: 4px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.information-menu__link {
+  display: block;
+  border-radius: 2px;
+
+  $properties-for-transition: background-color, opacity;
+
+  @include transition-settings($properties-for-transition);
+
+
+  // --- Интерактивные стили ---
+  @include non-touch {
+    &:hover .information-menu__link-icon {
+      stroke: $color-default-black;
+    }
+
+    // --- Отдельная мини-настройка для иконки Личного кабинета ---
+    &:hover .information-menu__link-icon--person {
+      fill: $color-default-black;
+      stroke: none;
+    }
+  }
+
+  &:focus .information-menu__link-icon {
+    stroke: $color-default-black;
+  }
+
+  // --- Отдельная мини-настройка для иконки Личного кабинета ---
+  &:focus .information-menu__link-icon--person {
+    fill: $color-default-black;
+    stroke: none;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.information-menu__link-icon {
+  display: block;
+
+  fill: transparent;
+  stroke: $color-gold;
+
+  $properties-for-transition: fill, stroke;
+  @include transition-settings($properties-for-transition);
+
+  &--person {
+    fill: $color-gold;
+    stroke: none;
+  }
+}
+
+.information-menu__phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 4px;
+
+  font-size: 0;
+}
+
+.information-menu__search-button {
+  margin: 0;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}

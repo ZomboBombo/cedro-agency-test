@@ -1,0 +1,68 @@
+.form__fieldset {
+  display: block;
+  
+  margin: 0;
+  padding: 0;
+  padding-bottom: $section-default-vertical-padding;
+
+  border: none;
+  border-bottom: 1px solid $color-grey;
+}
+
+.form__fieldset-title {
+  margin: 0;
+  padding: 0;
+  padding-top: $section-default-vertical-padding;
+
+  font-size: 20px;
+  line-height: 20px;
+  color: $color-default-black;
+}
+
+.form__submit-button {
+  width: 100%;
+
+  margin: 0 auto;
+  margin-top: 32px;
+  padding: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-default-white;
+  text-align: center;
+
+  background-color: $color-default-black;
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  $properties-for-transition: background-color, opacity;
+
+  @include transition-settings($properties-for-transition);
+
+
+  // --- Интерактивные стили ---
+  @include non-touch {
+    &:hover {
+      background-color: $color-gold;
+    }
+  }
+
+  &:focus {
+    background-color: $color-gold;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    color: $color-default-black;
+    background-color: $color-disabled;
+    cursor: default;
+    opacity: 0.7;
+  }
+}

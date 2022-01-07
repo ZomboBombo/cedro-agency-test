@@ -1,8 +1,0 @@
-.slider-list {
-  @include reset-list;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-  grid-column-gap: 8px;
-  grid-row-gap: 8px;
-}

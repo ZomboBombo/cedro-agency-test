@@ -1,5 +1,5 @@
 .container {
-  --container-default-padding: 16px;
+  --container-default-padding: var(--default-container-padding-value);
 
   width: 100%;
   max-width: $width--max;
@@ -9,6 +9,17 @@
   padding-right: var(--container-default-padding);
   padding-left: var(--container-default-padding);
 
-  // Tempo
-  // outline: 2px dashed red;
+
+  &--profile-form {
+    --container-default-padding: 16px;
+
+    // --- Медиа для ширины вьюпорта 1024px ---
+    @include vp--1023 {
+      --container-default-padding: 0;
+    }
+  }
+
+  &--no-padding {
+    --container-default-padding: 0;
+  }
 }

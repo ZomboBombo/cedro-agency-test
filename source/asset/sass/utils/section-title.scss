@@ -7,4 +7,11 @@
   line-height: 32px;
   color: $color-default-black;
   text-transform: uppercase;
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    font-size: 48px;
+    line-height: 56px;
+  }
 }

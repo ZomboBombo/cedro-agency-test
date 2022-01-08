@@ -3,20 +3,38 @@
   padding-bottom: $section-default-vertical-margin;
 
   background-color: $color-dark;
+
+   // --- Медиа для ширины вьюпорта 1024px ---
+   @include vp--1023 {
+     padding-top: 56px;
+     padding-bottom: 56px;
+   }
 }
 
 .site-footer__column {
-  margin-top: 40px;
+  border-bottom: 1px solid rgba($color-default-white, 0.1);
 
   &:first-child {
     margin-top: 0;
   }
+
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .site-footer__fine-print-text {
+  padding-top: 40px;
+
   font-size: 14px;
   line-height: 18px;
   color: $color-default-white;
 
   opacity: 0.4;
+
+
+   // --- Медиа для ширины вьюпорта 1024px ---
+   @include vp--1023 {
+    padding-top: 32px;
+   }
 }

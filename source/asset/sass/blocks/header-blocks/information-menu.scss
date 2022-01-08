@@ -5,6 +5,9 @@
   width: auto;
   max-width: 160px;
 
+  margin-left: auto;
+  margin-right: 20px;
+
 
   // --- Медиа для ширины вьюпорта 1024px ---
   @include vp--1023 {

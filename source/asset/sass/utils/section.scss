@@ -4,4 +4,11 @@
   padding-bottom: $section-default-vertical-padding;
 
   border-bottom: 1px solid $color-grey;
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    margin-top: 112px;
+    padding-bottom: 112px;
+  }
 }

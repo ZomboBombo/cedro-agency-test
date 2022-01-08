@@ -1,7 +1,26 @@
+.footer-nav-menu {
+  padding-bottom: 40px;
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    padding-bottom: 56px;
+  }
+}
+
 .footer-nav-menu__section {
   margin-top: 40px;
 
   &:first-of-type {
+    margin-top: 0;
+  }
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
     margin-top: 0;
   }
 }
@@ -9,7 +28,17 @@
 .footer-nav-menu__list {
   @include reset-list;
 
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
   margin-top: 24px;
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    row-gap: 16px;
+  }
 }
 
 .footer-nav-menu__item {

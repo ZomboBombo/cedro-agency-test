@@ -1,6 +1,13 @@
 .season-trends {
-  padding-bottom: 0;
+  position: relative;
+  padding-bottom: 64px;
   border: none;
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    padding-bottom: 112px;
+  }
 }
 
 .season-trends__title span {
@@ -53,6 +60,14 @@
 
   &:active {
     opacity: 0.5;
+  }
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 

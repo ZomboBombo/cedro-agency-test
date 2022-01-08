@@ -22,6 +22,76 @@
           <img src="asset/images/logo.svg" width="92" height="32" class="logo__image" alt="Логотип компании «Cedro Agency»">
         </a>
 
+        <ul class="catalog-menu">
+          <li class="catalog-menu__item">
+            <a href="#" class="catalog-menu__link">
+              Пигменты
+
+              <svg width="16" height="16" class="catalog-menu__link-icon">
+                <use xlink:href="#icon-submenu-indicator"></use>
+              </svg>
+            </a>
+
+            <ol class="catalog-menu__submenu">
+              <li class="catalog-menu__submenu-item">
+                <a href="#" class="catalog-menu__submenu-link">Пигменты для губ</a>
+              </li>
+              <li class="catalog-menu__submenu-item">
+                <a href="#" class="catalog-menu__submenu-link">Пигменты для бровей</a>
+              </li>
+              <li class="catalog-menu__submenu-item">
+                <a href="#" class="catalog-menu__submenu-link">Пигменты для век</a>
+              </li>
+              <li class="catalog-menu__submenu-item">
+                <a href="#" class="catalog-menu__submenu-link">Пигменты для кожи</a>
+              </li>
+              <li class="catalog-menu__submenu-item">
+                <a href="#" class="catalog-menu__submenu-link">Пигменты для трихо</a>
+              </li>
+            </ol>
+          </li>
+
+          <li class="catalog-menu__item">
+            <a href="#" class="catalog-menu__link">
+              Товары для ПМ
+
+              <svg width="16" height="16" class="catalog-menu__link-icon">
+                <use xlink:href="#icon-submenu-indicator"></use>
+              </svg>
+            </a>
+
+            <ol class="catalog-menu__submenu">
+              <li class="catalog-menu__submenu-item">
+                <a href="#" class="catalog-menu__submenu-link">Иглы</a>
+              </li>
+              <li class="catalog-menu__submenu-item">
+                <a href="#" class="catalog-menu__submenu-link">Картриджи</a>
+              </li>
+              <li class="catalog-menu__submenu-item">
+                <a href="#" class="catalog-menu__submenu-link">Машинки для татуажа</a>
+              </li>
+              <li class="catalog-menu__submenu-item">
+                <a href="#" class="catalog-menu__submenu-link">Маркеры</a>
+              </li>
+              <li class="catalog-menu__submenu-item">
+                <a href="#" class="catalog-menu__submenu-link">Обезболивающие</a>
+              </li>
+            </ol>
+          </li>
+
+          <li class="catalog-menu__item">
+            <a href="#" class="catalog-menu__link">Ремувер</a>
+          </li>
+
+          <li class="catalog-menu__item">
+            <a href="#" class="catalog-menu__link">Акции</a>
+          </li>
+
+          <li class="catalog-menu__item">
+            <a href="#" class="catalog-menu__link">Обучение</a>
+          </li>
+        </ul>
+
         <div class="site-header__info information-menu">
           <a href="tel:88005553535" class="information-menu__link information-menu__phone" title="Свяжитесь с нами по телефону" aria-label="Свяжитесь с нами по телефону">
             <svg width="24" height="24" class="information-menu__link-icon">
@@ -71,26 +141,88 @@
     </header>
 
     <main class="site-main">
-      <section class="profile-menu">
-        <div class="container profile-menu__wrapper">
-          <span class="visually-hidden">Меню личного кабинета</span>
+      <div class="container site-main__wrapper">
+        <section class="site-main__column profile-menu">
+          <div class="container profile-menu__wrapper">
+            <span class="visually-hidden">Меню личного кабинета</span>
 
-          <ul class="profile-menu__list">
-            <li class="profile-menu__list-item">
-              <a class="profile-menu__link profile-menu__link--active">Профиль</a>
-            </li>
+            <ul class="profile-menu__list">
+              <li class="profile-menu__list-item">
+                <a class="profile-menu__link profile-menu__link--active">Профиль</a>
+              </li>
 
-            <li class="profile-menu__list-item">
-              <a href="#" class="profile-menu__link" title="Перейти на страницу с Вашими заказами" aria-label="Перейти на страницу с Вашими заказами">Мои заказы</a>
-            </li>
-          </ul>
+              <li class="profile-menu__list-item">
+                <a href="#" class="profile-menu__link" title="Перейти на страницу с Вашими заказами" aria-label="Перейти на страницу с Вашими заказами">Мои заказы</a>
+              </li>
+            </ul>
 
-          <button type="button" class="profile-menu__action-button" title="Выйти из Личного кабинета" aria-label="Выйти из Личного кабинета">Выход</button>
+            <button type="button" class="profile-menu__action-button" title="Выйти из Личного кабинета" aria-label="Выйти из Личного кабинета">Выход</button>
+          </div>
+        </section>
+
+        <div class="site-main__column">
+          <h1 class="section-title site-main__main-title">Профиль</h1>
+
+          <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data" class="form">
+            <fieldset class="form__fieldset">
+              <legend class="form__fieldset-title">Данные профиля</legend>
+
+              <ul class="form__inputs-list form-list">
+                <li class="form-list__item">
+                  <label for="user-name" class="form-list__label">ФИО</label>
+                  <input type="text" class="form-list__input" id="user-name" name="name" placeholder="Васильев Василий Васильевич" required>
+                </li>
+
+                <li class="form-list__item">
+                  <label for="user-email" class="form-list__label">Почта</label>
+                  <input type="email" class="form-list__input" id="user-email" name="email" placeholder="email@example.com" required>
+                </li>
+
+                <li class="form-list__item">
+                  <label for="user-phone" class="form-list__label">Телефон</label>
+                  <input type="text" class="form-list__input" id="user-phone" name="phone" placeholder="+7 (012) 345-67-89">
+                </li>
+
+                <li class="form-list__item">
+                  <label for="user-account-name" class="form-list__label">Имя аккаунта</label>
+                  <input type="text" class="form-list__input" id="user-account-name" name="account-name" placeholder="Например, Vasya 2V или WVasiliy" required>
+                </li>
+
+                <li class="form-list__item">
+                  <label for="user-instagram-link" class="form-list__label">Профиль в инстаграм</label>
+                  <input type="text" class="form-list__input" id="user-instagram-link" name="instagram-link" placeholder="Ссылка на Ваш профиль в Instagram">
+                </li>
+                
+                <li class="form-list__item">
+                  <label for="user-address" class="form-list__label">Адрес доставки</label>
+                  <input type="text" class="form-list__input" id="user-address" name="address" placeholder="Город, улица, дом" required>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="form__fieldset">
+              <legend class="form__fieldset-title">Изменить пароль</legend>
+
+              <ul class="form__inputs-list form-list">
+                <li class="form-list__item">
+                  <label for="password-old" class="form-list__label">Старый пароль</label>
+                  <input type="password" class="form-list__input" id="password-old" placeholder="Введите старый пароль" required>
+                </li>
+
+                <li class="form-list__item">
+                  <label for="password-new" class="form-list__label">Новый пароль</label>
+                  <input type="password" class="form-list__input" id="password-new" placeholder="Введите новый пароль" required>
+                </li>
+              </ul>
+            </fieldset>
+
+            <button type="submit" class="form__submit-button">Сохранить изменения</button>
+          </form>
         </div>
-      </section>
+      </div>
 
       <div class="container site-main__wrapper">
-        <h1 class="section-title site-main__main-title">Профиль</h1>
+        <!-- <h1 class="section-title site-main__main-title">Профиль</h1>
 
         <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data" class="form">
           <fieldset class="form__fieldset">
@@ -103,7 +235,7 @@
               </li>
 
               <li class="form-list__item">
-                <label for="user-email" class="form-list__label" class="form-list__label">Почта</label>
+                <label for="user-email" class="form-list__label">Почта</label>
                 <input type="email" class="form-list__input" id="user-email" name="email" placeholder="email@example.com" required>
               </li>
 
@@ -146,7 +278,7 @@
           </fieldset>
 
           <button type="submit" class="form__submit-button">Сохранить изменения</button>
-        </form>
+        </form> -->
 
         <section class="section season-trends">
           <h2 class="section-title season-trends__title">

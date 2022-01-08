@@ -1,0 +1,175 @@
+.catalog-menu {
+  @include reset-list;
+
+  display: none;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 16px;
+
+  max-width: 768px;
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    display: flex;
+  }
+}
+
+.catalog-menu__item {
+  position: relative;
+}
+
+.catalog-menu__link {
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: $color-default-black;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  $properties-for-transition: color, opacity;
+
+  @include transition-settings($properties-for-transition);
+
+
+  // --- Интерактивные стили ---
+  @include non-touch {
+    &:hover {
+      color: $color-gold;
+    }
+
+    // --- Настройка для изменения иконки ---
+    &:hover .catalog-menu__link-icon {
+      transform: rotate(180deg);
+      stroke: $color-gold;
+    }
+
+    // --- Настройка для открытия Подменю ---
+    &:hover + .catalog-menu__submenu {
+      // --- Настройки для отображения Подменю ---
+      height: auto;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      border-color: $color-grey;
+      box-shadow: 0 4px 4px 0 rgba($color-default-black, 0.3);
+    }
+  }
+
+  &:focus {
+    color: $color-gold;
+  }
+
+  // --- Настройка для изменения иконки ---
+  &:focus .catalog-menu__link-icon {
+    transform: rotate(180deg);
+    stroke: $color-gold;
+  }
+
+  // --- Настройка для открытия Подменю ---
+  &:focus + .catalog-menu__submenu {
+    // --- Настройки для отображения Подменю ---
+    height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-color: $color-grey;
+    box-shadow: 0 4px 4px 0 rgba($color-default-black, 0.3);
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.catalog-menu__link-icon {
+  margin-left: 2px;
+
+  fill: none;
+  stroke: $color-default-black;
+
+  $properties-for-transition: transform, stroke;
+
+  @include transition-settings($properties-for-transition);
+}
+
+.catalog-menu__submenu {
+  @include reset-list;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+
+  width: max-content;
+
+  padding-right: 12px;
+  padding-left: 12px;
+  
+  background-color: $color-default-white;
+  border: 1px solid $color-grey;
+  border-top: none;
+  border-radius: 8px;
+
+  // --- Настройки для отображения Подменю ---
+  height: 0;
+  border-color: transparent;
+  overflow: hidden;
+
+  $properties-for-transition: height, padding, border-color, box-shadow;
+
+  @include transition-settings($properties-for-transition);
+
+
+  // --- Интерактивные стили ---
+  @include non-touch {
+    &:hover {
+      // --- Настройки для отображения Подменю ---
+      height: auto;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      border-color: $color-grey;
+      box-shadow: 0 4px 4px 0 rgba($color-default-black, 0.3);
+    }
+  }
+}
+
+.catalog-menu__submenu-link {
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-default-black;
+  text-transform: uppercase;
+  text-decoration: none;
+  
+  opacity: 0.5;
+
+  $properties-for-transition: color, opacity;
+
+  @include transition-settings($properties-for-transition);
+
+
+  &--active {
+    color: $color-gold;
+  }
+
+
+  // --- Интерактивные стили ---
+  @include non-touch {
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    color: $color-gold;
+  }
+}

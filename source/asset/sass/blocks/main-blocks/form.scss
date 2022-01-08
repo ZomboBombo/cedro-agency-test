@@ -1,3 +1,10 @@
+.form {
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    border-top: 1px solid $color-grey;
+  }
+}
+
 .form__fieldset {
   display: block;
   
@@ -7,6 +14,14 @@
 
   border: none;
   border-bottom: 1px solid $color-grey;
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    padding-right: 95px;
+    padding-bottom: 80px;
+    padding-left: 95px;
+  }
 }
 
 .form__fieldset-title {
@@ -17,6 +32,15 @@
   font-size: 20px;
   line-height: 20px;
   color: $color-default-black;
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    padding-top: 80px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .form__submit-button {
@@ -64,5 +88,18 @@
     background-color: $color-disabled;
     cursor: default;
     opacity: 0.7;
+  }
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    width: max-content;
+
+    margin-top: 80px;
+    margin-left: 95px;
+    padding-top: 16px;
+    padding-right: 32px;
+    padding-bottom: 16px;
+    padding-left: 32px;
   }
 }

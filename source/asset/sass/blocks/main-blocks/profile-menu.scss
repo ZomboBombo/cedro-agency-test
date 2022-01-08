@@ -1,18 +1,23 @@
 .profile-menu {
-  margin: 0;
-  padding: 0;
-
   border-bottom: 1px solid $color-grey;
 }
 
 .profile-menu__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   align-items: center;
 
   padding-top: 2px;
   padding-bottom: 2px;
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    padding-left: 80px;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .profile-menu__list {
@@ -22,6 +27,12 @@
   flex-wrap: wrap;
   column-gap: 16px;
   row-gap: 12px;
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    flex-direction: column
+  }
 }
 
 .profile-menu__link {
@@ -58,7 +69,7 @@
 }
 
 .profile-menu__action-button {
-  padding: 6px 10px;
+  padding: 0;
 
   font-size: 14px;
   line-height: 24px;
@@ -71,7 +82,7 @@
 
   cursor: pointer;
 
-  $properties-for-transition: color, background-color, opacity;
+  $properties-for-transition: color, opacity;
 
   @include transition-settings($properties-for-transition);
 
@@ -79,17 +90,21 @@
   // --- Интерактивные стили ---
   @include non-touch {
     &:hover {
-      color: $color-default-white;
-      background-color: $color-default-black;
+      color: $color-gold;
     }
   }
 
   &:focus {
-    color: $color-default-white;
-    background-color: $color-default-black;
+    color: $color-gold;
   }
 
   &:active {
     opacity: 0.7;
+  }
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    margin-top: 12px;
   }
 }

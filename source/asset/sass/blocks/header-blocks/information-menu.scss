@@ -4,6 +4,12 @@
 
   width: auto;
   max-width: 160px;
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    max-width: max-content
+  }
 }
 
 .information-menu__list {
@@ -26,13 +32,17 @@
   display: block;
   border-radius: 2px;
 
-  $properties-for-transition: background-color, opacity;
+  $properties-for-transition: color, background-color, opacity;
 
   @include transition-settings($properties-for-transition);
 
 
   // --- Интерактивные стили ---
   @include non-touch {
+    &:hover {
+      color: $color-default-black;
+    }
+
     &:hover .information-menu__link-icon {
       stroke: $color-default-black;
     }
@@ -42,6 +52,10 @@
       fill: $color-default-black;
       stroke: none;
     }
+  }
+
+  &:focus {
+    color: $color-default-black;
   }
 
   &:focus .information-menu__link-icon {
@@ -82,6 +96,19 @@
   margin-right: 4px;
 
   font-size: 0;
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    margin-right: 42px;
+
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: $color-gold;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
 }
 
 .information-menu__search-button {

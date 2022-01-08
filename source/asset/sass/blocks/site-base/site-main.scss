@@ -1,9 +1,37 @@
 .site-main__wrapper {
-  padding-top: $section-default-vertical-padding;
-  padding-bottom: $section-default-vertical-padding;
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    display: grid;
+    grid-template-columns: 272px 1fr;
+  }
+}
+
+.site-main__column {
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    padding-top: 112px;
+    padding-bottom: 80px;
+
+    border: 1px solid $color-grey;
+    border-top: none;
+
+    &:not(:first-child) {
+      border-left: none;
+    }
+  }
 }
 
 .site-main__main-title {
   font-size: 35px;
   line-height: 40px;
+
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    margin-bottom: 80px;
+    padding-left: 95px;
+
+    font-size: 80px;
+    line-height: 80px;
+  }
 }

@@ -1,12 +1,18 @@
 // === ПЕРЕМЕННЫЕ ===
 
 // *** для различных Ширин вьюпорта ***
-$width--mobile:                                     375px;
-$width--tablet:                                     768px;
-$width--desktop:                                    1023px;
+$vp--320:                                           320px;
+$vp--375:                                           375px;
+$vp--768:                                           768px;
+$vp--1024:                                          1024px;
+$vp--1280:                                          1280px;
 
-$width--min:                                        320px;
-$width--max:                                        1280px;
+$width--mobile:                                     $vp--375;
+$width--tablet:                                     $vp--768 - 1;
+$width--desktop:                                    $vp--1024 - 1;
+
+$width--min:                                        $vp--320;
+$width--max:                                        $vp--1280;
 
 
 // *** для Шрифтов ***

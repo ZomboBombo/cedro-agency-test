@@ -42,3 +42,26 @@
     @content;
   }
 }
+
+
+
+/*
+ * -- Миксины для разных Медиавыражений
+ */
+@mixin vp--767 {
+  @media (min-width: $vp--768 - 1) {
+    @content;
+  }
+}
+
+@mixin vp--1023 {
+  @media (min-width: $vp--1024 - 1) {
+    @content;
+  }
+}
+
+@mixin vp--1279 {
+  @media (min-width: $vp--1280 - 1) {
+    @content;
+  }
+}

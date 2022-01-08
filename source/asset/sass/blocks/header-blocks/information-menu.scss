@@ -11,6 +11,7 @@
 
   // --- Медиа для ширины вьюпорта 1024px ---
   @include vp--1023 {
+    margin-right: 32px;
     max-width: max-content
   }
 }
@@ -21,6 +22,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
+  min-width: 128px;
 }
 
 .information-menu__list-item {

@@ -1,4 +1,7 @@
 .site-header {
+  position: relative;
+  z-index: 1;
+
   border-bottom: 1px solid $color-grey;
 }
 
@@ -9,8 +12,28 @@
 
   padding-top: 16px;
   padding-bottom: 16px;
+
+  background-color: $color-default-white;
 }
 
 .site-header__burger {
   margin-right: auto;
+}
+
+.site-header__search-field {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%);
+
+  $properties-for-transition: top, box-shadow;
+
+  @include transition-settings($properties-for-transition);
+
+
+  &--opened {
+    top: 100%;
+    box-shadow: 0 4px 4px 0 rgba($color-default-black, 0.3);
+  }
 }

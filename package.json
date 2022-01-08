@@ -39,8 +39,8 @@
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
-    "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
+    "stylelint": "stylelint \"source/asset/sass/**/*.scss\" --custom-syntax postcss-scss",
+    "test": "npm run editorconfig && npm run stylelint && eslint source/asset/js/",
     "build": "gulp build",
     "start": "gulp start",
     "imagemin": "gulp imagemin"

@@ -29,7 +29,7 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
     display: block;
 
     width: 20px;
@@ -52,12 +52,12 @@
 
 
   // --- Интерактивные стили ---
-  @include non-touch { 
+  @include non-touch {
     &:hover::before {
       background-color: $color-gold;
       top: calc(50% - 5px);
     }
-  
+
     &:hover::after {
       background-color: $color-gold;
       top: calc(50% + 5px);

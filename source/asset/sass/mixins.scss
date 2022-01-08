@@ -3,7 +3,7 @@
 /*
  * -- Миксин для удаления маркеров элементов маркированных списков
  * -- и обнуления отступов
- */ 
+ */
 @mixin reset-list {
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@
 
 /*
  * -- Миксин для настроек плавности интерактивных элементов
- */ 
+ */
 @mixin transition-settings ($property, $duration: 0.4s, $timing-func: ease) {
   transition: {
     property: $property;
@@ -42,7 +42,6 @@
     @content;
   }
 }
-
 
 
 /*

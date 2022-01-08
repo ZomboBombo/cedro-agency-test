@@ -7,14 +7,14 @@
 
 .form__fieldset {
   display: block;
-  
+
   /*
    * *** Настройки для отступов внтури <fieldset>
    * ***
-   * *** Эти настройки необходимы для того, 
+   * *** Эти настройки необходимы для того,
    * *** чтобы border-bottom тянулся на всю ширину экрана,
    * *** находясь внутри .container
-   */ 
+   */
   margin: 0;
   margin-right: calc(-1 * var(--default-container-padding-value));
   margin-left: calc(-1 * var(--default-container-padding-value));

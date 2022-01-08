@@ -33,7 +33,7 @@
 
   // --- Медиа для ширины вьюпорта 1024px ---
   @include vp--1023 {
-    flex-direction: column
+    flex-direction: column;
   }
 }
 

@@ -12,7 +12,7 @@
   // --- Медиа для ширины вьюпорта 1024px ---
   @include vp--1023 {
     margin-right: 32px;
-    max-width: max-content
+    max-width: max-content;
   }
 }
 
@@ -86,6 +86,7 @@
   stroke: $color-gold;
 
   $properties-for-transition: fill, stroke;
+
   @include transition-settings($properties-for-transition);
 
   &--person {

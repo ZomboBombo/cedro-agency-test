@@ -5,7 +5,7 @@
 
 
   // --- Интерактивные стили ---
-  @include non-touch { 
+  @include non-touch {
     &:hover {
       opacity: 0.7;
     }

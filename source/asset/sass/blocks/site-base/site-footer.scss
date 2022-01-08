@@ -4,11 +4,11 @@
 
   background-color: $color-dark;
 
-   // --- Медиа для ширины вьюпорта 1024px ---
-   @include vp--1023 {
-     padding-top: 56px;
-     padding-bottom: 56px;
-   }
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
 }
 
 .site-footer__column {
@@ -33,8 +33,8 @@
   opacity: 0.4;
 
 
-   // --- Медиа для ширины вьюпорта 1024px ---
-   @include vp--1023 {
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
     padding-top: 32px;
-   }
+  }
 }

@@ -509,6 +509,7 @@ footer {
           column-gap: 16px;
   row-gap: 16px;
   max-width: 768px;
+  margin-left: 105px;
 }
 @media (min-width: 1023px) {
   .catalog-menu {
@@ -685,6 +686,7 @@ footer {
 }
 @media (min-width: 1023px) {
   .information-menu {
+    margin-right: 32px;
     max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
@@ -703,6 +705,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-width: 128px;
 }
 
 .information-menu__list-item {

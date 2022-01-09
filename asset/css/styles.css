@@ -382,6 +382,23 @@ footer {
   }
 }
 
+.error-field--input {
+  color: #da7070;
+  border: 1px solid #da7070 !important;
+}
+.error-field--message {
+  display: block;
+  width: auto;
+  height: auto;
+  font-size: 16px;
+  line-height: 24px;
+  color: #da7070;
+}
+
+.correct-field {
+  color: #d0bc7a;
+}
+
 /* **********************
 *** 3. Основные стили ***
 ********************** */
@@ -1538,6 +1555,7 @@ footer {
 }
 
 .form-list__input {
+  width: 100%;
   margin: 0;
   margin-top: 8px;
   padding: 16px;
@@ -1546,6 +1564,9 @@ footer {
   background-color: #f7f7f7;
   border: none;
   border-radius: 4px;
+}
+.form-list__input--password {
+  margin-top: 0;
 }
 @media (hover: hover) and (pointer: fine) {
   .form-list__input:hover::-webkit-input-placeholder {
@@ -1563,6 +1584,9 @@ footer {
   .form-list__input:hover::placeholder {
     opacity: 0.8;
   }
+  .form-list__input--password:hover ~ .form-list__password-state-toggler {
+    opacity: 1;
+  }
 }
 .form-list__input:focus::-webkit-input-placeholder {
   opacity: 0.8;
@@ -1579,8 +1603,65 @@ footer {
 .form-list__input:focus::placeholder {
   opacity: 0.8;
 }
+.form-list__input--password:focus ~ .form-list__password-state-toggler {
+  opacity: 1;
+}
 .form-list__input:active {
   opacity: 0.5;
+}
+
+.form-list__password-input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.form-list__password-state-toggler {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  font-size: 0;
+  background-color: transparent;
+  border: none;
+  opacity: 0;
+  cursor: pointer;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .form-list__password-state-toggler:hover {
+    opacity: 1;
+  }
+  .form-list__password-state-toggler:hover .form-list__password-state-toggler-icon {
+    stroke: #21242e;
+  }
+}
+.form-list__password-state-toggler:focus {
+  opacity: 1;
+}
+.form-list__password-state-toggler:focus .form-list__password-state-toggler-icon {
+  stroke: #21242e;
+}
+.form-list__password-state-toggler:active {
+  opacity: 0.5;
+}
+
+.form-list__password-state-toggler-icon {
+  fill: transparent;
+  stroke: #a1a3a7;
+  -webkit-transition-property: stroke;
+  transition-property: stroke;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 
 .season-trends {

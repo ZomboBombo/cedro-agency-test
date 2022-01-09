@@ -11,65 +11,22 @@
   }
 }
 
-.footer-nav-menu__section {
-  margin-top: 40px;
-
-  &:first-of-type {
-    margin-top: 0;
-  }
-
-
-  // --- Медиа для ширины вьюпорта 1024px ---
-  @include vp--1023 {
-    margin-top: 0;
-  }
+.footer-nav-menu__title {
+  color: $color-default-white;
 }
 
-.footer-nav-menu__list {
-  @include reset-list;
-
-  display: flex;
-  flex-direction: column;
-  row-gap: 8px;
-
-  margin-top: 24px;
-
-
-  // --- Медиа для ширины вьюпорта 1024px ---
-  @include vp--1023 {
-    row-gap: 16px;
-  }
+.footer-nav-menu__title a {
+  color: $color-default-white;
 }
 
 .footer-nav-menu__item {
-  font-size: 16px;
-  line-height: 24px;
   color: $color-default-white;
-
-  opacity: 0.8;
 }
 
 .footer-nav-menu__link {
   color: $color-default-white;
-  text-decoration: none;
+}
 
-  $properties-for-transition: opacity;
-
-  @include transition-settings($properties-for-transition);
-
-
-  // --- Интерактивные стили ---
-  @include non-touch {
-    &:hover {
-      opacity: 0.5;
-    }
-  }
-
-  &:focus {
-    opacity: 0.5;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
+.footer-nav-menu__icon {
+  fill: $color-default-white;
 }

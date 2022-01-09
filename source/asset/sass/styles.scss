@@ -31,6 +31,9 @@
 @import "blocks/header-blocks/information-menu.scss";
 @import "blocks/header-blocks/burger-button.scss";
 @import "blocks/header-blocks/search-field.scss";
+@import "blocks/header-blocks/navigation-menu.scss";
+@import "blocks/header-blocks/navigation-contacts.scss";
+@import "blocks/header-blocks/header-nav-menu.scss";
 
 // --- 3.3) стили для элементов Мэйн ---
 @import "blocks/main-blocks/profile-menu.scss";
@@ -42,7 +45,5 @@
 
 // --- 3.4) стили для элементов Футера ---
 @import "blocks/footer-blocks/footer-nav-menu.scss";
-@import "blocks/footer-blocks/footer-section.scss";
-@import "blocks/footer-blocks/footer-contacts.scss";
 @import "blocks/footer-blocks/copyright.scss";
 @import "blocks/footer-blocks/socials.scss";

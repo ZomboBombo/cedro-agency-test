@@ -1569,6 +1569,14 @@ footer {
   margin-top: 0;
 }
 @media (hover: hover) and (pointer: fine) {
+  .form-list__input--password:hover ~ .form-list__password-state-toggler {
+    opacity: 1;
+  }
+}
+.form-list__input--password:focus ~ .form-list__password-state-toggler {
+  opacity: 1;
+}
+@media (hover: hover) and (pointer: fine) {
   .form-list__input:hover::-webkit-input-placeholder {
     opacity: 0.8;
   }
@@ -1583,9 +1591,6 @@ footer {
   }
   .form-list__input:hover::placeholder {
     opacity: 0.8;
-  }
-  .form-list__input--password:hover ~ .form-list__password-state-toggler {
-    opacity: 1;
   }
 }
 .form-list__input:focus::-webkit-input-placeholder {
@@ -1602,9 +1607,6 @@ footer {
 }
 .form-list__input:focus::placeholder {
   opacity: 0.8;
-}
-.form-list__input--password:focus ~ .form-list__password-state-toggler {
-  opacity: 1;
 }
 .form-list__input:active {
   opacity: 0.5;

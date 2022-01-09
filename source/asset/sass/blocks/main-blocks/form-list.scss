@@ -24,6 +24,8 @@
 }
 
 .form-list__input {
+  width: 100%;
+
   margin: 0;
   margin-top: 8px;
   padding: 16px;
@@ -36,10 +38,22 @@
   border-radius: 4px;
 
 
+  &--password {
+    margin-top: 0;
+  }
+
+
   // --- Интерактивные стили ---
   @include non-touch {
     &:hover::placeholder {
       opacity: 0.8;
+    }
+
+    // --- Настройка для показа переключателя состояния Пароля ---
+    &--password {
+      &:hover ~ .form-list__password-state-toggler {
+        opacity: 1;
+      }
     }
   }
 
@@ -47,7 +61,75 @@
     opacity: 0.8;
   }
 
+  // --- Настройка для показа переключателя состояния Пароля ---
+  &--password {
+    &:focus ~ .form-list__password-state-toggler {
+      opacity: 1;
+    }
+  }
+
   &:active {
     opacity: 0.5;
   }
+}
+
+.form-list__password-input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.form-list__password-state-toggler {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  display: block;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: none;
+
+  opacity: 0;
+
+  cursor: pointer;
+
+  $properties-for-transition: opacity;
+
+  @include transition-settings($properties-for-transition);
+
+
+  // --- Интерактивные стили ---
+  @include non-touch {
+    &:hover {
+      opacity: 1;
+    }
+
+    &:hover .form-list__password-state-toggler-icon {
+      stroke: $color-default-black;
+    }
+  }
+
+  &:focus {
+    opacity: 1;
+  }
+
+  &:focus .form-list__password-state-toggler-icon {
+    stroke: $color-default-black;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.form-list__password-state-toggler-icon {
+  fill: transparent;
+  stroke: $color-mercury;
+
+  $properties-for-transition: stroke;
+
+  @include transition-settings($properties-for-transition);
 }

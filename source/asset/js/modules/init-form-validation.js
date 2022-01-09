@@ -46,9 +46,17 @@ const initFormValidation = () => {
       erroredField.classList.remove('error-field', 'error-field--input');
       erroredField.classList.add('correct-field');
 
-      if (erroredField.nextElementSibling) {
-        if (erroredField.nextElementSibling.classList.contains('error-field')) {
-          erroredField.nextElementSibling.remove();
+      if (erroredField.classList.contains('js-input-password')) {
+        if (erroredField.parentNode.nextElementSibling) {
+          if (erroredField.parentNode.nextElementSibling.classList.contains('error-field')) {
+            erroredField.parentNode.nextElementSibling.remove();
+          }
+        }
+      } else {
+        if (erroredField.nextElementSibling) {
+          if (erroredField.nextElementSibling.classList.contains('error-field')) {
+            erroredField.nextElementSibling.remove();
+          }
         }
       }
     }

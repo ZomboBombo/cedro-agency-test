@@ -40,6 +40,20 @@
 
   &--password {
     margin-top: 0;
+
+
+    // --- Интерактивные стили ---
+    @include non-touch {
+      // --- Настройка для показа переключателя состояния Пароля ---
+      &:hover ~ .form-list__password-state-toggler {
+        opacity: 1;
+      }
+    }
+
+    // --- Настройка для показа переключателя состояния Пароля ---
+    &:focus ~ .form-list__password-state-toggler {
+      opacity: 1;
+    }
   }
 
 
@@ -48,24 +62,10 @@
     &:hover::placeholder {
       opacity: 0.8;
     }
-
-    // --- Настройка для показа переключателя состояния Пароля ---
-    &--password {
-      &:hover ~ .form-list__password-state-toggler {
-        opacity: 1;
-      }
-    }
   }
 
   &:focus::placeholder {
     opacity: 0.8;
-  }
-
-  // --- Настройка для показа переключателя состояния Пароля ---
-  &--password {
-    &:focus ~ .form-list__password-state-toggler {
-      opacity: 1;
-    }
   }
 
   &:active {

@@ -6,17 +6,12 @@
 /* eslint no-undef: "error" */
 /* eslint-env node */
 
+// --- Файлы с настройками для Webpack ---
+import webpackStream from 'webpack-stream';
+const webpackConfig = require('../../webpack.config.js');
 
-import { dest } from 'gulp';
-
-// --- JS-утилиты ---
-import browserify from 'browserify';
-import babelify from 'babelify';
-
-// --- Вспомогательные утилиты ---
-import mergeStream from 'merge-stream';
-import { glob } from 'glob';
-import source from 'vinyl-source-stream';
+// --- Gulp-утилиты ---
+import { dest, src } from 'gulp';
 
 
 /*
@@ -37,44 +32,9 @@ import Utils from '../gulp-utils';
 
 // *** Сборка всех JS-файлов ***
 export default function scripts() {
-  // --- Список путей к JS-файлам разных категорий ---
-  const JsPath = {
-    toMainFiles: glob.sync(PATH_TO.source.js.main_files),
-    toVendorFiles: glob.sync(PATH_TO.source.js.vendor_files)
-  };
-
-  // --- Список имён для новых названий сфомированных файлов ---
-  const NameOfReturnFile = {
-    mainJs: 'main.js',
-    vendorJs: 'vendor.js',
-  };
-
-  /*
-  --- Функция для трансформирования JS-файлов в синтаксис ES5
-  --- с помощью "Browserify"
-  */
-  const browserifyTransform = (pathToFiles, nameForReturnedFile) => {
-    return browserify({
-        entries: pathToFiles
-      })
-      .transform(babelify, {
-        presets: ['@babel/preset-env']
-      })
-      .bundle()
-      .pipe(source(nameForReturnedFile));
-  };
-
-  // --- Поток для сборки JS-файлов категории "Main" ---
-  const mainJsStream = Utils.pipeline(
-      browserifyTransform(JsPath.toMainFiles, NameOfReturnFile.mainJs),
+  return Utils.pipeline(
+      src(PATH_TO.source.js.main_files),
+      webpackStream(webpackConfig),
       dest(PATH_TO.build.js)
   );
-
-  // --- Поток для сборки JS-файлов категории "Vendor" ---
-  const vendorJsStream = Utils.pipeline(
-      browserifyTransform(JsPath.toVendorFiles, NameOfReturnFile.vendorJs),
-      dest(PATH_TO.build.js)
-  );
-
-  return mergeStream(mainJsStream, vendorJsStream);
 }

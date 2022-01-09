@@ -1,6 +1,6 @@
 .navigation-menu__wrapper {
   padding-bottom: 40px;
-  
+
 
   // --- Медиа для ширины вьюпорта 1024px ---
   @include vp--1023 {
@@ -40,7 +40,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    
+
     display: block;
 
     width: 100%;

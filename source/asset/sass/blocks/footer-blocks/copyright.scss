@@ -13,6 +13,10 @@
   }
 }
 
+.copyright__socials {
+  max-width: 112px;
+}
+
 .copyright__link {
   display: flex;
   align-items: center;
@@ -54,13 +58,13 @@
   // --- Медиа для ширины вьюпорта 1024px ---
   @include vp--1023 {
     margin-top: 0;
+    margin-right: 16px;
 
     &--text {
       margin-left: 272px;
     }
 
     &--developer {
-      margin-right: 16px;
       margin-left: auto;
     }
   }

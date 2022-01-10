@@ -29,9 +29,9 @@
 
   // --- Медиа для ширины вьюпорта 1024px ---
   @include vp--1023 {
-    padding-right: 95px;
+    padding-right: 88px;
     padding-bottom: 80px;
-    padding-left: 95px;
+    padding-left: 88px;
   }
 }
 
@@ -58,7 +58,7 @@
   width: 100%;
 
   margin: 0 auto;
-  margin-top: 32px;
+  margin-top: 31px;
   padding: 0;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -106,11 +106,11 @@
   @include vp--1023 {
     width: max-content;
 
-    margin-top: 80px;
-    margin-left: 95px;
+    margin-top: 79px;
+    margin-left: 72px;
     padding-top: 16px;
-    padding-right: 32px;
+    padding-right: 33px;
     padding-bottom: 16px;
-    padding-left: 32px;
+    padding-left: 33px;
   }
 }

@@ -6,7 +6,6 @@
   // --- Медиа для ширины вьюпорта 1024px ---
   @include vp--1023 {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     padding-top: 32px;
@@ -55,6 +54,15 @@
   // --- Медиа для ширины вьюпорта 1024px ---
   @include vp--1023 {
     margin-top: 0;
+
+    &--text {
+      margin-left: 272px;
+    }
+
+    &--developer {
+      margin-right: 16px;
+      margin-left: auto;
+    }
   }
 }
 

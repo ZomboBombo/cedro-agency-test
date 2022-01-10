@@ -16,8 +16,22 @@
   background-color: $color-default-white;
 }
 
+.site-header__logo {
+  margin-left: 0;
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    margin-left: 8px;
+  }
+}
+
 .site-header__burger {
-  margin-right: auto;
+  margin-right: 0;
+
+  // --- Медиа для ширины вьюпорта 1024px ---
+  @include vp--1023 {
+    margin-right: 24px;
+  }
 }
 
 .site-header__search-field {

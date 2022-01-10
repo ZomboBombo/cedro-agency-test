@@ -10,6 +10,21 @@
   padding-left: var(--container-default-padding);
 
 
+  &--section {
+    --container-default-padding: var(--default-container-padding-value);
+
+    // --- Медиа для ширины вьюпорта 1024px ---
+    @include vp--1023 {
+      --container-default-padding: 72px;
+    }
+  }
+
+
+  &--no-padding {
+    --container-default-padding: 0;
+  }
+
+
   &--profile-form {
     --container-default-padding: 16px;
 
@@ -20,7 +35,8 @@
   }
 
 
-  &--no-padding {
-    --container-default-padding: 0;
+  &--season-trends {
+    overflow-x: hidden;
   }
+
 }

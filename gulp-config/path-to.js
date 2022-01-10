@@ -17,6 +17,7 @@ export default {
     },
     fonts: './source/asset/fonts/',
     images: './source/asset/images/',
+    favicons: './source/asset/favicons/',
   },
 
 

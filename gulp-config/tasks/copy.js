@@ -26,7 +26,8 @@ import PATH_TO from '../path-to';
 const path_to_copy = {
   all_fonts: PATH_TO.source.fonts + '**/*.{woff,woff2}',
   all_images: PATH_TO.source.images + '**',
-  all_icons: PATH_TO.source + '/*.ico',
+  all_icons: PATH_TO.source.root + '**/*.ico',
+  all_favicons: PATH_TO.source.favicons + '**',
 };
 
 // *** Копирование файлов ***
@@ -36,6 +37,7 @@ export default function copy() {
         path_to_copy.all_fonts,
         path_to_copy.all_images,
         path_to_copy.all_icons,
+        path_to_copy.all_favicons,
       ], {
         base: PATH_TO.source.root
       }),

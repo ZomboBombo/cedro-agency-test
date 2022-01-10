@@ -7,7 +7,8 @@ const initMaskForInputs = () => {
     return;
   }
 
-  const formPhone = form.querySelector('input[type="phone"]');
+  const formEmail = form.querySelector('#user-email');
+  const formPhone = form.querySelector('#user-phone');
 
 
   /*
@@ -16,12 +17,30 @@ const initMaskForInputs = () => {
   =======================================================================
   */
 
+  /*
+   * *** Маска для поля с Почтой ***
+   */
+
   /* eslint-disable-next-line */
   Inputmask({
-    'mask': '+7 (***) ***-**-**',
-    'greedy': false,
+    'mask': 'a{3,}@a{1,}.a{2,3}',
     'definitions': {
-      '*': {
+      'a': {
+        validator: '[A-Za-z]',
+      }
+    },
+  }).mask(formEmail);
+
+
+  /*
+   * *** Маска для поля с Номером телефона ***
+   */
+
+  /* eslint-disable-next-line */
+  Inputmask({
+    'mask': '+7 (999) 999-99-99',
+    'definitions': {
+      '9': {
         validator: '[0-9]',
       }
     },

@@ -1,5 +1,6 @@
 const initFormValidation = () => {
   // ----------- КОНСТАНТЫ ----------
+  const EMAIL_REG_EXP = /^[^\_]*$/;
   const PHONE_REG_EXP = /^[^\_]*$/;
 
 
@@ -12,7 +13,8 @@ const initFormValidation = () => {
   }
 
   const formInputs = form.querySelectorAll('input');
-  const formPhone = form.querySelector('input[type="phone"]');
+  const formEmail = form.querySelector('#user-email');
+  const formPhone = form.querySelector('#user-phone');
   const formSubmitButton = form.querySelector('.form__submit-button');
 
 
@@ -68,12 +70,14 @@ const initFormValidation = () => {
     // --- Справочник ОШИБОК валидации ---
     const error = {
       emptyField: fieldForCheck.value.length === 0,
+      incorrectEmail: !EMAIL_REG_EXP.test(fieldForCheck.value) && fieldForCheck === formEmail,
       incorrectPhoneNumber: !PHONE_REG_EXP.test(fieldForCheck.value) && fieldForCheck === formPhone,
     };
 
     // --- Справочник СООБЩЕНИЙ об ошибках валидации ---
     const message = {
       emptyField: 'Это обязательное поле',
+      incorrectEmail: 'Некорректный адрес электронной почты',
       incorrectPhoneNumber: 'Некорректный номер телефона'
     };
 
@@ -88,6 +92,10 @@ const initFormValidation = () => {
     switch (true) {
       case error.emptyField:
         addValidationError(fieldForCheck, message.emptyField);
+        break;
+
+      case error.incorrectEmail:
+        addValidationError(fieldForCheck, message.incorrectEmail);
         break;
 
       case error.incorrectPhoneNumber:

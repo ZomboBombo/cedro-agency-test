@@ -1,21 +1,23 @@
 /* ***********************
 *** 1. Служебные стили ***
 *********************** */
-@import "normalize.scss";
-@import "fonts.scss";
-@import "variables.scss";
-@import "mixins.scss";
-@import "global.scss";
+@import "vendor/swiper";
+
+@import "normalize";
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "global";
 
 
 /* ***************************
 *** 2. Универсальные стили ***
 *************************** */
-@import "utils/container.scss";
-@import "utils/section.scss";
-@import "utils/section-title.scss";
-@import "utils/error-field.scss";
-@import "utils/correct-field.scss";
+@import "utils/container";
+@import "utils/section";
+@import "utils/section-title";
+@import "utils/error-field";
+@import "utils/correct-field";
 
 
 /* **********************
@@ -23,29 +25,29 @@
 ********************** */
 
 // --- 3.1) стили для Главных контентных блоков ---
-@import "blocks/site-base/site-header.scss";
-@import "blocks/site-base/site-main.scss";
-@import "blocks/site-base/site-footer.scss";
+@import "blocks/site-base/site-header";
+@import "blocks/site-base/site-main";
+@import "blocks/site-base/site-footer";
 
 // --- 3.2) стили для элементов Шапки сайта ---
-@import "blocks/header-blocks/logo.scss";
-@import "blocks/header-blocks/catalog-menu.scss";
-@import "blocks/header-blocks/information-menu.scss";
-@import "blocks/header-blocks/burger-button.scss";
-@import "blocks/header-blocks/search-field.scss";
-@import "blocks/header-blocks/navigation-menu.scss";
-@import "blocks/header-blocks/navigation-contacts.scss";
-@import "blocks/header-blocks/header-nav-menu.scss";
+@import "blocks/header-blocks/logo";
+@import "blocks/header-blocks/catalog-menu";
+@import "blocks/header-blocks/information-menu";
+@import "blocks/header-blocks/burger-button";
+@import "blocks/header-blocks/search-field";
+@import "blocks/header-blocks/navigation-menu";
+@import "blocks/header-blocks/navigation-contacts";
+@import "blocks/header-blocks/header-nav-menu";
 
 // --- 3.3) стили для элементов Мэйн ---
-@import "blocks/main-blocks/profile-menu.scss";
-@import "blocks/main-blocks/form.scss";
-@import "blocks/main-blocks/form-list.scss";
-@import "blocks/main-blocks/season-trends.scss";
-@import "blocks/main-blocks/slider-list.scss";
-@import "blocks/main-blocks/product-card.scss";
+@import "blocks/main-blocks/profile-menu";
+@import "blocks/main-blocks/form";
+@import "blocks/main-blocks/form-list";
+@import "blocks/main-blocks/season-trends";
+@import "blocks/main-blocks/slider-list";
+@import "blocks/main-blocks/product-card";
 
 // --- 3.4) стили для элементов Футера ---
-@import "blocks/footer-blocks/footer-nav-menu.scss";
-@import "blocks/footer-blocks/copyright.scss";
-@import "blocks/footer-blocks/socials.scss";
+@import "blocks/footer-blocks/footer-nav-menu";
+@import "blocks/footer-blocks/copyright";
+@import "blocks/footer-blocks/socials";

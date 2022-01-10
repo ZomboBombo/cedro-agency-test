@@ -1,15 +1,9 @@
 .slider-list {
   @include reset-list;
+}
 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-  grid-column-gap: 8px;
-  grid-row-gap: 8px;
-
-
-  // --- Медиа для ширины вьюпорта 1024px ---
-  @include vp--1023 {
-    grid-column-gap: 32px;
-    grid-row-gap: 32px;
-  }
+.slider-list__item {
+  // --- Настройки для корректного отображения слайдов при активном «Swiper» ---
+  max-width: 256px;
+  min-width: 256px;
 }

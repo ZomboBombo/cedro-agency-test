@@ -33,7 +33,7 @@ import Utils from '../gulp-utils';
 // *** Сборка всех JS-файлов ***
 export default function scripts() {
   return Utils.pipeline(
-      src(PATH_TO.source.js.main_files),
+      src(PATH_TO.source.js.main_file),
       webpackStream(webpackConfig),
       dest(PATH_TO.build.js)
   );

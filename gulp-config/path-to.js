@@ -13,8 +13,7 @@ export default {
     },
     js: {
       root: './source/asset/js/',
-      main_files: './source/asset/js/*.js',
-      vendor_files: 'source/asset/js/vendor/*.js',
+      main_file: './source/asset/js/main.js',
     },
     fonts: './source/asset/fonts/',
     images: './source/asset/images/',

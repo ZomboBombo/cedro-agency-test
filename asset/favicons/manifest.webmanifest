@@ -1,0 +1,22 @@
+{
+  "icons": [
+      {
+          "src": "/16.png",
+          "sizes": "16x16",
+          "type": "image/png"
+      },
+      {
+          "src": "/32.png",
+          "sizes": "32x32",
+          "type": "image/png"
+      },
+      {
+          "src": "/150.png",
+          "sizes": "150x150",
+          "type": "image/png"
+      }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

@@ -1257,6 +1257,10 @@ footer {
 .logo:active {
   opacity: 0.3;
 }
+.logo--main:hover, .logo--main:focus, .logo--main:active {
+  opacity: 1;
+  cursor: default;
+}
 
 .catalog-menu {
   margin: 0;

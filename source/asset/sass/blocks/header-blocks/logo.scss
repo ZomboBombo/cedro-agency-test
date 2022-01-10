@@ -18,4 +18,16 @@
   &:active {
     opacity: 0.3;
   }
+
+
+  // *** Модификатор для Лого на Главной ***
+  &--main {
+    // --- Интерактивные стили ---
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+      cursor: default;
+    }
+  }
 }

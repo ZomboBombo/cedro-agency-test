@@ -2588,7 +2588,7 @@ footer {
 @media (min-width: 1023px) {
   .product-card::before {
     top: 24px;
-    right: 24px;
+    left: 24px;
   }
 }
 
@@ -2812,6 +2812,10 @@ footer {
   }
 }
 
+.copyright__socials {
+  max-width: 112px;
+}
+
 .copyright__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2851,12 +2855,12 @@ footer {
 @media (min-width: 1023px) {
   .copyright__link {
     margin-top: 0;
+    margin-right: 16px;
   }
   .copyright__link--text {
     margin-left: 272px;
   }
   .copyright__link--developer {
-    margin-right: 16px;
     margin-left: auto;
   }
 }

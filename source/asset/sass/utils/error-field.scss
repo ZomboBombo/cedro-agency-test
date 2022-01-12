@@ -1,6 +1,8 @@
 .error-field {
   &--input {
     color: $color-error;
+
+    /* stylelint-disable-next-line */
     border: 1px solid $color-error !important;
   }
 

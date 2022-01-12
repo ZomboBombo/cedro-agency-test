@@ -57,6 +57,7 @@
     // --- Интерактивные стили ---
     @include non-touch {
       // --- Настройка для показа переключателя состояния Пароля ---
+      /* stylelint-disable-next-line */
       &:hover ~ .form-list__password-state-toggler {
         opacity: 1;
       }
@@ -97,7 +98,7 @@
   width: 100%;
   margin-top: 8px;
 
-  
+
   // --- Медиа для ширины вьюпорта 1024px ---
   @include vp--1023 {
     margin-top: 1px;

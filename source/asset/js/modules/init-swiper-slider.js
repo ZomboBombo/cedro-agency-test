@@ -23,7 +23,7 @@ const initSwiperSlider = () => {
     breakpoints: {
       1024: {
         spaceBetween: 32,
-      }
+      },
     },
 
     a11y: {

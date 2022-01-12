@@ -27,7 +27,7 @@ const initMaskForInputs = () => {
     'definitions': {
       'a': {
         validator: '[A-Za-z]',
-      }
+      },
     },
   }).mask(formEmail);
 
@@ -42,7 +42,7 @@ const initMaskForInputs = () => {
     'definitions': {
       '9': {
         validator: '[0-9]',
-      }
+      },
     },
   }).mask(formPhone);
 };

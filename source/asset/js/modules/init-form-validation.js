@@ -61,7 +61,7 @@ const initFormValidation = () => {
           }
         }
       }
-    }
+    },
   };
 
 
@@ -78,7 +78,7 @@ const initFormValidation = () => {
     const message = {
       emptyField: 'Это обязательное поле',
       incorrectEmail: 'Некорректный адрес электронной почты',
-      incorrectPhoneNumber: 'Некорректный номер телефона'
+      incorrectPhoneNumber: 'Некорректный номер телефона',
     };
 
 

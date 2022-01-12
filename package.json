@@ -13,6 +13,7 @@
     "browser-sync": "2.27.7",
     "browserify": "17.0.0",
     "clean-webpack-plugin": "4.0.0",
+    "cross-env": "7.0.3",
     "del": "^6.0.0",
     "eslint": "8.1.0",
     "eslint-config-htmlacademy": "4.1.x",
@@ -45,8 +46,8 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/asset/sass/**/*.scss\" --custom-syntax postcss-scss",
     "test": "npm run editorconfig && npm run stylelint && eslint source/asset/js/",
-    "build": "gulp build",
-    "start": "gulp start",
+    "build": "cross-env NODE_ENV=production gulp build && gulp imagemin",
+    "start": "cross-env NODE_ENV=development gulp start",
     "imagemin": "gulp imagemin"
   },
   "typeRoots": [
